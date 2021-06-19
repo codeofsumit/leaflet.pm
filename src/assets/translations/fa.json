@@ -27,6 +27,7 @@
     "deleteButton": "حذف لایه‌ها",
     "drawCircleMarkerButton": "رسم نشان دایره",
     "snappingButton": "نشانگر را به لایه‌ها و رئوس دیگر بکشید",
-    "pinningButton": "رئوس مشترک را با هم پین کنید"
+    "pinningButton": "رئوس مشترک را با هم پین کنید",
+    "rotateButton": "چرخش لایه"
   }
 }
