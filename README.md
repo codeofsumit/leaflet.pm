@@ -142,10 +142,27 @@ And to disable it:
 L.PM.setOptIn(false);
 ```
 
+If you have enabled opt-in before you init the map, you need to specify `pmIgnore: false` in the map options:
+
+```js
+const map = L.map('map', { pmIgnore: false })
+```
+
 All layers will be ignored by Leaflet-Geoman, unless you specify `pmIgnore: false` on a layer:
 
 ```js
 L.marker([51.50915, -0.096112], { pmIgnore: false }).addTo(map);
+```
+
+Newly drawn layers will be ignored as well.
+
+To prevent this you can add the following event handler:
+
+```js
+map.on('pm:create', (e) => {
+  e.layer.setStyle({ pmIgnore: false });
+  L.PM.reInitLayer(e.layer);
+});
 ```
 
 #### Leaflet-Geoman Toolbar
